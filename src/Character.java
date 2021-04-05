@@ -43,7 +43,7 @@ class Character {
 		this.action = action;
 		this.charaFrame = charaFrame;
 		this.name = name;
-		
+
 		this.charaX = action.getCharaX() * magn;
 		this.charaY = action.getCharaY() * magn;
 		this.charaW = action.getCharaW();
@@ -53,7 +53,7 @@ class Character {
 
 		this.animationCycle = action.getAnimationCycle();
 		this.movementCycle = action.getMovementCycle();
-		
+
 		//JPanel
 		charaFrame.addPLI(name,panelW,panelH);
 		pli = charaFrame.getPLI(name);
@@ -78,7 +78,7 @@ class Character {
 	public void setAnimation() {
 		animationCycle.add(name + "Animation",this,"animationImageChange");
 	}
-	
+
 	//ラジアンから画像の縦座標へ
 	public void setDirection(double rad) {
 		for(int n = 0; n < animationRadRanges.length; n++) {
@@ -89,12 +89,12 @@ class Character {
 		}
 		animationDirection = 0;
 	}
-	
+
 	//アニメーション繰り返し処理
 	public void animationImageChange() {
 		//ここ可変にしたい
 		++animationNumber;
-		
+
 		if(animationNumber >= charaRows) {
 			animationNumber = 0;
 		}

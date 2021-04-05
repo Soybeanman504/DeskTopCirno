@@ -10,7 +10,7 @@ interface Action {
     public int getCharaY();
     public int getCharaW();
     public int getCharaH();
-    
+
     public RunCycle getAnimationCycle();
     public RunCycle getMovementCycle();
 }
@@ -51,6 +51,13 @@ class Cirno implements Action {
 		this.animationCycle = animationCycle;
 		this.movementCycle = movementCycle;
 		this.piis = piis;
+
+/*
+		for(int n = 0;n < imagePaths.length;n++) {
+			imagePaths[n] = new File(imagePaths[n]).getAbsolutePath();
+		}
+		System.out.println(imagePaths[0]);
+*/
 		piis.setImageIconsByPaths(imagePaths);
 		//フレームの大きさ
 

@@ -66,7 +66,7 @@ public class ProgramMain{
 
 	//メイン
 	public static void main(String[] args) {
-    	new Cirno(animationCycle,movementCycle,pathImageIcons);
+		new Cirno(animationCycle,movementCycle,pathImageIcons);
     }
 }
 
